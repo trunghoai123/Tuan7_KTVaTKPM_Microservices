@@ -1,0 +1,21 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: ChuyenBay-Server
+  datasource:
+    url: jdbc:mysql://localhost:3307/maybay
+    username: root
+    password: password 
+  jpa:
+    hibernate:
+      ddl-auto: update 
+    generate-ddl: true
+    show-sql: true
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl.defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
